@@ -144,8 +144,9 @@ p {
     height: 150vh;
     display: flex;
     flex-direction: column;
-    justify-content: justify;
+    justify-content: center;
     align-items: center;
+    
 }
 .content1 {
     height: 10vh;
@@ -180,6 +181,7 @@ p {
 .sau {
     padding: 30px;
     background: rgb(255, 255, 255);
+    font-size: 15px;
 }
 .sau1 {
     padding: 10px;
