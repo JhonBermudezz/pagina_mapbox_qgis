@@ -144,7 +144,7 @@ p {
     height: 150vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: justify;
     align-items: center;
 }
 .content1 {
