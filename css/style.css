@@ -1,0 +1,669 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+/*cabecera de la pagina*/
+.head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 120px;
+    background: rgba(5, 136, 5, 0.644);
+    position: sticky;
+    width: 100%;
+    z-index: 100;
+}
+.footer-links {
+  background: rgba(5, 136, 5, 0.644);
+  color: black;
+  font-size: 12px;
+  padding: 35px 0;
+}
+
+.footer-container {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.footer-container ul {
+  margin: 0 auto;
+}
+
+.footer-links li {
+  line-height: 2.8em;
+}
+
+.footer {
+  background: rgba(5, 136, 5, 0.644);
+  color: black;
+  font-size: 12px;
+  padding: 20px 0;
+  text-align: center;
+  font-size: 1rem;
+  padding-bottom: 20px;
+}
+
+.footer-links a{
+  color: black;
+}
+.navbar {
+    display: flex;
+    margin-right: 10px;
+}
+
+.logo {
+    margin-left: 30px;
+}
+
+.logo a {
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 20px;
+}
+
+.navbar a {
+    display: block;
+    padding: 20px 20px;
+    color: black;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 20px;
+}
+
+.navbar a:hover {
+    color: #D3D4EC;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.header {
+    height: 60vh !important;
+    background: url(img/blanco.jpeg) no-repeat center;
+    background-size: cover;
+}
+
+.title {
+    margin-bottom: 40px;
+    font-size: 60px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+p {
+    margin-bottom: 40px;
+    font-size: 18px;
+    color: #fff;
+    padding: 0 100px;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 40px;
+    border: 2px solid #9c27b0;
+    color: #fff;
+    text-decoration: none;
+    background: #9c27b0;
+}
+
+.btn:hover {
+    background: none;
+    
+}
+
+.btn-home {
+    display: flex;
+}
+
+.btn-home a {
+    margin: 0 10px;
+}
+.contenedor {
+    height: 150vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.content1 {
+    height: 10vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.content {
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.contentsau {
+    height: 10vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.content2 {
+    height: 0vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/*margen para los cuadritos del centro*/
+.sau {
+    padding: 30px;
+    background: rgb(255, 255, 255);
+}
+.sau1 {
+    padding: 10px;
+    background: #f7f7f7f6
+}
+/*organiza los cuadros, su espacio entre ellos*/
+.box-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+
+}
+/*cuadros del centro cada diseño*/
+.box-container .box {
+    height: 11rem;
+    width: 17rem;
+    background: #797979c9;
+    text-align: center;
+    border-radius: 1rem;
+    box-shadow: 0 .3rem 5rem rgba(0, 0 , 0, .5);
+    margin: 2rem;   
+}
+
+.box-container .box i {
+    height: 3rem;
+    width: 3rem;
+    line-height: 3rem;
+    text-align: center;
+    border-radius: 50%;
+    color: #fff;
+    background: #000000;
+    font-size: 2rem;
+    margin: 1rem 0;
+
+}
+
+.box-container .box h3 {
+    font-size: 20px;
+    color: #f4f1f5;
+
+}
+/*Organiza la letra en cada cuadro pequeño*/
+
+/*para poner el color al segundo contenido*/
+.about {
+    background: #000000d8;
+}
+
+.price {
+    background: url(img/fondo2.jpg) no-repeat center;
+    background-attachment: fixed;
+    background-size: cover;
+    text-align: center;
+}
+
+/*el final de la pagina*/
+.contact {
+    padding-top: 15px;
+    background: #0000006b;
+    padding-bottom: 0;
+}
+.letra1{
+color: #000000;
+font-size: 2.75rem;
+font-family: montserratregular;
+}
+.posiletra{
+position: relative;
+width: 80%;
+padding-right: 5 px;
+padding-left: 5 px;
+font-size: 30px;
+}
+.letrap{
+    font-family: montserratregular;
+    margin-top: 50px;
+    color: rgb(0, 0, 0);
+    font-size: 40px; 
+        }
+.posiletra2{
+    position: relative;
+    width: 80%;
+    padding-right: 10px;
+    padding-left: 10px;
+    font-size: 25px;
+    font-family: montserratregular;
+    }
+/*HISTORIA UNIVERSIDAD*/
+
+    .img-history{
+      margin-top: 50px;
+      background: url(/css/images/universidad.png);
+      background-position: center center;
+      background-size: cover;
+      width: 100%;
+      height: 700px;
+      margin-bottom: 120px;
+      box-shadow: 10px 10px 20px black;
+      border-radius: 2px;
+  }
+  #uniminuto .historia-text{
+      color: black;
+      text-align: initial;
+      width: 50%;
+      max-width: 600px;
+      padding: 0px 30px;
+      justify-content: center;
+      flex-direction: column;
+      display: flex;
+      font-size: 17px;
+  }
+  #uniminuto .container-historia{
+      display: flex;
+      justify-content: center;
+      padding: 70px 12px;
+  }
+  #uniminuto .container-historia h2{
+      margin-bottom: 20px;
+  }
+  .historia-text p{
+      margin-bottom: 20px;
+      color: black;
+  }
+ 
+
+
+
+
+
+@media (max-width: 768px) {
+    .title {
+        margin-bottom: 0;
+        font-size: 30px; 
+        
+        
+    }
+    .letra1 {
+      margin-bottom: 0;
+      font-size: 30px;
+      
+  }
+    .posiletra {
+      margin-bottom: 0;
+      font-size: 30px;
+      
+  }
+    .letrap {
+      margin-bottom: 0;
+      font-size: 30px;
+      
+  }
+    .posiletra2{
+      margin-bottom: 0 ;
+      font-size: 30xp;
+      }
+    .letra {
+        margin-bottom: 0;
+        font-size: 50px;
+        
+    }
+
+    .sau {
+        height: 250vh;
+    }
+    .sau1 {
+      height: 1500vh;
+  }
+
+    .navbar {
+        display: none;
+    }
+
+}
+
+
+
+
+/*aqui va la ultima animacion*/
+
+.typewriter {
+    --blue: #5C86FF;
+    --blue-dark: #275EFE;
+    --key: #fff;
+    --paper: #EEF0FD;
+    --text: #D3D4EC;
+    --tool: #FBC56C;
+    --duration: 3s;
+    position: relative;
+    -webkit-animation: bounce05 var(--duration) linear infinite;
+    animation: bounce05 var(--duration) linear infinite;
+  }
+  
+  .typewriter .slide {
+    width: 92px;
+    height: 20px;
+    border-radius: 3px;
+    margin-left: 14px;
+    transform: translateX(14px);
+    background: linear-gradient(var(--blue), var(--blue-dark));
+    -webkit-animation: slide05 var(--duration) ease infinite;
+    animation: slide05 var(--duration) ease infinite;
+  }
+  
+  .typewriter .slide:before, .typewriter .slide:after,
+  .typewriter .slide i:before {
+    content: "";
+    position: absolute;
+    background: var(--tool);
+  }
+  
+  .typewriter .slide:before {
+    width: 2px;
+    height: 8px;
+    top: 6px;
+    left: 100%;
+  }
+  
+  .typewriter .slide:after {
+    left: 94px;
+    top: 3px;
+    height: 14px;
+    width: 6px;
+    border-radius: 3px;
+  }
+  
+  .typewriter .slide i {
+    display: block;
+    position: absolute;
+    right: 100%;
+    width: 6px;
+    height: 4px;
+    top: 4px;
+    background: var(--tool);
+  }
+  
+  .typewriter .slide i:before {
+    right: 100%;
+    top: -2px;
+    width: 4px;
+    border-radius: 2px;
+    height: 14px;
+  }
+  
+  .typewriter .paper {
+    position: absolute;
+    left: 24px;
+    top: -26px;
+    width: 40px;
+    height: 46px;
+    border-radius: 5px;
+    background: var(--paper);
+    transform: translateY(46px);
+    -webkit-animation: paper05 var(--duration) linear infinite;
+    animation: paper05 var(--duration) linear infinite;
+  }
+  
+  .typewriter .paper:before {
+    content: "";
+    position: absolute;
+    left: 6px;
+    right: 6px;
+    top: 7px;
+    border-radius: 2px;
+    height: 4px;
+    transform: scaleY(0.8);
+    background: var(--text);
+    box-shadow: 0 12px 0 var(--text), 0 24px 0 var(--text), 0 36px 0 var(--text);
+  }
+  
+  .typewriter .keyboard {
+    width: 120px;
+    height: 56px;
+    margin-top: -10px;
+    z-index: 1;
+    position: relative;
+  }
+  
+  .typewriter .keyboard:before, .typewriter .keyboard:after {
+    content: "";
+    position: absolute;
+  }
+  
+  .typewriter .keyboard:before {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 7px;
+    background: linear-gradient(135deg, var(--blue), var(--blue-dark));
+    transform: perspective(10px) rotateX(2deg);
+    transform-origin: 50% 100%;
+  }
+  
+  .typewriter .keyboard:after {
+    left: 2px;
+    top: 25px;
+    width: 11px;
+    height: 4px;
+    border-radius: 2px;
+    box-shadow: 15px 0 0 var(--key), 30px 0 0 var(--key), 45px 0 0 var(--key), 60px 0 0 var(--key), 75px 0 0 var(--key), 90px 0 0 var(--key), 22px 10px 0 var(--key), 37px 10px 0 var(--key), 52px 10px 0 var(--key), 60px 10px 0 var(--key), 68px 10px 0 var(--key), 83px 10px 0 var(--key);
+    -webkit-animation: keyboard05 var(--duration) linear infinite;
+    animation: keyboard05 var(--duration) linear infinite;
+  }
+  
+  @keyframes bounce05 {
+    85%, 92%, 100% {
+      transform: translateY(0);
+    }
+  
+    89% {
+      transform: translateY(-4px);
+    }
+  
+    95% {
+      transform: translateY(2px);
+    }
+  }
+  
+  @keyframes slide05 {
+    5% {
+      transform: translateX(14px);
+    }
+  
+    15%, 30% {
+      transform: translateX(6px);
+    }
+  
+    40%, 55% {
+      transform: translateX(0);
+    }
+  
+    65%, 70% {
+      transform: translateX(-4px);
+    }
+  
+    80%, 89% {
+      transform: translateX(-12px);
+    }
+  
+    100% {
+      transform: translateX(14px);
+    }
+  }
+  
+  @keyframes paper05 {
+    5% {
+      transform: translateY(46px);
+    }
+  
+    20%, 30% {
+      transform: translateY(34px);
+    }
+  
+    40%, 55% {
+      transform: translateY(22px);
+    }
+  
+    65%, 70% {
+      transform: translateY(10px);
+    }
+  
+    80%, 85% {
+      transform: translateY(0);
+    }
+  
+    92%, 100% {
+      transform: translateY(46px);
+    }
+  }
+  
+  @keyframes keyboard05 {
+    5%, 12%, 21%, 30%, 39%, 48%, 57%, 66%, 75%, 84% {
+      box-shadow: 15px 0 0 var(--key), 30px 0 0 var(--key), 45px 0 0 var(--key), 60px 0 0 var(--key), 75px 0 0 var(--key), 90px 0 0 var(--key), 22px 10px 0 var(--key), 37px 10px 0 var(--key), 52px 10px 0 var(--key), 60px 10px 0 var(--key), 68px 10px 0 var(--key), 83px 10px 0 var(--key);
+    }
+  
+    9% {
+      box-shadow: 15px 2px 0 var(--key), 30px 0 0 var(--key), 45px 0 0 var(--key), 60px 0 0 var(--key), 75px 0 0 var(--key), 90px 0 0 var(--key), 22px 10px 0 var(--key), 37px 10px 0 var(--key), 52px 10px 0 var(--key), 60px 10px 0 var(--key), 68px 10px 0 var(--key), 83px 10px 0 var(--key);
+    }
+  
+    18% {
+      box-shadow: 15px 0 0 var(--key), 30px 0 0 var(--key), 45px 0 0 var(--key), 60px 2px 0 var(--key), 75px 0 0 var(--key), 90px 0 0 var(--key), 22px 10px 0 var(--key), 37px 10px 0 var(--key), 52px 10px 0 var(--key), 60px 10px 0 var(--key), 68px 10px 0 var(--key), 83px 10px 0 var(--key);
+    }
+  
+    27% {
+      box-shadow: 15px 0 0 var(--key), 30px 0 0 var(--key), 45px 0 0 var(--key), 60px 0 0 var(--key), 75px 0 0 var(--key), 90px 0 0 var(--key), 22px 12px 0 var(--key), 37px 10px 0 var(--key), 52px 10px 0 var(--key), 60px 10px 0 var(--key), 68px 10px 0 var(--key), 83px 10px 0 var(--key);
+    }
+  
+    36% {
+      box-shadow: 15px 0 0 var(--key), 30px 0 0 var(--key), 45px 0 0 var(--key), 60px 0 0 var(--key), 75px 0 0 var(--key), 90px 0 0 var(--key), 22px 10px 0 var(--key), 37px 10px 0 var(--key), 52px 12px 0 var(--key), 60px 12px 0 var(--key), 68px 12px 0 var(--key), 83px 10px 0 var(--key);
+    }
+  
+    45% {
+      box-shadow: 15px 0 0 var(--key), 30px 0 0 var(--key), 45px 0 0 var(--key), 60px 0 0 var(--key), 75px 0 0 var(--key), 90px 2px 0 var(--key), 22px 10px 0 var(--key), 37px 10px 0 var(--key), 52px 10px 0 var(--key), 60px 10px 0 var(--key), 68px 10px 0 var(--key), 83px 10px 0 var(--key);
+    }
+  
+    54% {
+      box-shadow: 15px 0 0 var(--key), 30px 2px 0 var(--key), 45px 0 0 var(--key), 60px 0 0 var(--key), 75px 0 0 var(--key), 90px 0 0 var(--key), 22px 10px 0 var(--key), 37px 10px 0 var(--key), 52px 10px 0 var(--key), 60px 10px 0 var(--key), 68px 10px 0 var(--key), 83px 10px 0 var(--key);
+    }
+  
+    63% {
+      box-shadow: 15px 0 0 var(--key), 30px 0 0 var(--key), 45px 0 0 var(--key), 60px 0 0 var(--key), 75px 0 0 var(--key), 90px 0 0 var(--key), 22px 10px 0 var(--key), 37px 10px 0 var(--key), 52px 10px 0 var(--key), 60px 10px 0 var(--key), 68px 10px 0 var(--key), 83px 12px 0 var(--key);
+    }
+  
+    72% {
+      box-shadow: 15px 0 0 var(--key), 30px 0 0 var(--key), 45px 2px 0 var(--key), 60px 0 0 var(--key), 75px 0 0 var(--key), 90px 0 0 var(--key), 22px 10px 0 var(--key), 37px 10px 0 var(--key), 52px 10px 0 var(--key), 60px 10px 0 var(--key), 68px 10px 0 var(--key), 83px 10px 0 var(--key);
+    }
+  
+    81% {
+      box-shadow: 15px 0 0 var(--key), 30px 0 0 var(--key), 45px 0 0 var(--key), 60px 0 0 var(--key), 75px 0 0 var(--key), 90px 0 0 var(--key), 22px 10px 0 var(--key), 37px 12px 0 var(--key), 52px 10px 0 var(--key), 60px 10px 0 var(--key), 68px 10px 0 var(--key), 83px 10px 0 var(--key);
+    }
+  }
+
+
+
+
+    /*nuevo para cada cuadro figura*/
+    .loader {
+        width: 6em;
+        height: 6em;
+        font-size: 10px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      
+      .loader .face {
+        position: absolute;
+        border-radius: 50%;
+        border-style: solid;
+        animation: animate023845 3s linear infinite;
+      }
+      
+      .loader .face:nth-child(1) {
+        width: 100%;
+        height: 100%;
+        color: gold;
+        border-color: currentColor transparent transparent currentColor;
+        border-width: 0.2em 0.2em 0em 0em;
+        --deg: -45deg;
+        animation-direction: normal;
+      }
+      
+      .loader .face:nth-child(2) {
+        width: 70%;
+        height: 70%;
+        color: lime;
+        border-color: currentColor currentColor transparent transparent;
+        border-width: 0.2em 0em 0em 0.2em;
+        --deg: -135deg;
+        animation-direction: reverse;
+      }
+      
+      .loader .face .circle {
+        position: absolute;
+        width: 50%;
+        height: 0.1em;
+        top: 50%;
+        left: 50%;
+        background-color: transparent;
+        transform: rotate(var(--deg));
+        transform-origin: left;
+      }
+      
+      .loader .face .circle::before {
+        position: absolute;
+        top: -0.5em;
+        right: -0.5em;
+        content: '';
+        width: 1em;
+        height: 1em;
+        background-color: currentColor;
+        border-radius: 50%;
+        box-shadow: 0 0 2em,
+                      0 0 4em,
+                      0 0 6em,
+                      0 0 8em,
+                      0 0 10em,
+                      0 0 0 0.5em rgba(255, 255, 0, 0.1);
+      }
+      
+      @keyframes animate023845 {
+        to {
+          transform: rotate(1turn);
+        }
+      }
