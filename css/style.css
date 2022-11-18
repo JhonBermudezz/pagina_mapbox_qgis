@@ -273,7 +273,7 @@ font-size: 20px;
 /*HISTORIA UNIVERSIDAD*/
 
     .img-history{
-      margin-top: 50px;
+      margin-top: 0px;
       background: url(/css/images/universidad.png);
       background-position: center center;
       background-size: cover;
