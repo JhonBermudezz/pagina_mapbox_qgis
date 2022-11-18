@@ -181,7 +181,7 @@ p {
 .sau {
     padding: 30px;
     background: rgb(255, 255, 255);
-    font-size: 15px;
+    
 }
 .sau1 {
     padding: 10px;
@@ -254,7 +254,7 @@ position: relative;
 width: 80%;
 padding-right: 5 px;
 padding-left: 5 px;
-font-size: 30px;
+font-size: 15px;
 }
 .letrap{
     font-family: montserratregular;
