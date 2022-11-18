@@ -245,6 +245,7 @@ p {
     padding-bottom: 0;
 }
 .letra1{
+text-align:justify;
 color: #000000;
 font-size: 2.75rem;
 font-family: montserratregular;
