@@ -59,7 +59,7 @@ body {
 }
 
 .footer-links a{
-  color: black;
+  color: white;
 }
 .navbar {
     display: flex;
@@ -156,7 +156,7 @@ p {
     align-items: center;
 }
 .content {
-    height: 80vh;
+    height: 50vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
