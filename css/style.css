@@ -44,7 +44,9 @@ footer{
   color: white;
   background-color:#061d51;
 }
-
+.image-logo{
+  width:500px;
+}
 .copyright-container{
   width: 100%;
   display: flex;
@@ -418,6 +420,9 @@ p {
     justify-content: space-between;
     align-items: flex-start;
     border-bottom: 1px solid #2A2A2A;
+}
+.image-logo{
+  width:300px;
 }
 }
 
