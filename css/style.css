@@ -450,16 +450,16 @@ p {
   .navbar {
     display: none;
   }
-}
-.img-history {
-  margin-top: 0px;
-  background: url(./images/universidad.png);
-  background-position: center center;
-  background-size: cover;
-  width: 90%;
-  height: 300px;
-  margin-bottom: 120px;
-  border-radius: 2px;
+  .img-history {
+    margin-top: 0px;
+    background: url(./images/universidad.png);
+    background-position: center center;
+    background-size: cover;
+    width: 90%;
+    height: 300px;
+    margin-bottom: 120px;
+    border-radius: 2px;
+  }
 }
 .container-navBar {
   position: absolute;
