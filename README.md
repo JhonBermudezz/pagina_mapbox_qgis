@@ -8,3 +8,5 @@ Desarrollo de aplicación orientada a la web para la recopilación de informaci�
 del corredor ecológico de la ciudad de Villavicencio
 
 Con los tutores y asesores el ING Daymer Arley Garcia, el ING Leyder Lopez.
+
+Link de la pagina que se estan haciendo las pruebas: https://corredor-ecologico.netlify.app/
