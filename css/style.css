@@ -14,8 +14,8 @@ body {
 }
 
 #map {
-  width: 99%;
-  margin: 10px;
+  width: 97%;
+  margin: 20px;
 }
 
 /*cabecera de la pagina*/
@@ -369,6 +369,10 @@ p {
 }
 
 @media (max-width:457px) {
+  #map{
+    width: 50%;
+    height: 50%;
+  }
   .letrap {
     font-size: 27px !important;
   }
@@ -447,7 +451,16 @@ p {
     display: none;
   }
 }
-
+.img-history {
+  margin-top: 0px;
+  background: url(./images/universidad.png);
+  background-position: center center;
+  background-size: cover;
+  width: 90%;
+  height: 300px;
+  margin-bottom: 120px;
+  border-radius: 2px;
+}
 .container-navBar {
   position: absolute;
   width: 100%;
