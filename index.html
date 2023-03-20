@@ -66,7 +66,8 @@
         </p>
     </header>
     <body>
-        <div id="map"></div>
+        <div id="map">
+        </div>
         <script src="js/qgis2web_expressions.js"></script>
         <script src="js/leaflet.js"></script>
         <script src="js/multi-style-layer.js"></script>
@@ -79,376 +80,414 @@
         <script src="js/labels.js"></script>
         <script src="data/capa_1.js"></script>
         <script>
-            var map = L.map("map", {
-                zoomControl: true,
-                maxZoom: 20,
-                minZoom: 1,
-            }).fitBounds([
-                [4.054047557727622, -73.64193238366043],
-                [4.092410039067717, -73.58065897454055],
-            ]);
-            var hash = new L.Hash(map);
-            map.attributionControl.setPrefix(
-                '<a href="https://github.com/tomchadwin/qgis2web" target="_blank">qgis2web</a> &middot; <a href="https://leafletjs.com" title="A JS library for interactive maps">Leaflet</a> &middot; <a href="https://qgis.org">QGIS</a>'
-            );
-            var autolinker = new Autolinker({
-                truncate: { length: 30, location: "smart" },
-            });
-            var bounds_group = new L.featureGroup([]);
-            function setBounds() { }
-            map.createPane("pane_Satelite_0");
-            map.getPane("pane_Satelite_0").style.zIndex = 400;
-            var layer_Satelite_0 = L.tileLayer(
-                "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
-                {
-                    pane: "pane_Satelite_0",
-                    opacity: 1.0,
-                    attribution: "",
-                    minZoom: 1,
-                    maxZoom: 20,
-                    minNativeZoom: 0,
-                    maxNativeZoom: 18,
-                }
-            );
-            layer_Satelite_0;
-            map.addLayer(layer_Satelite_0);
-            function pop_capa_1(feature, layer) {
-                var popupContent =
-                    '<table>\
-                        <tr>\
-                            <td colspan="2">' +
-                    (feature.properties["id"] !== null
-                        ? autolinker.link(feature.properties["id"].toLocaleString())
-                        : "") +
-                    '</td>\
-                        </tr>\
-                        <tr>\
-                            <td colspan="2">' +
-                    (feature.properties["descripcio"] !== null
-                        ? autolinker.link(feature.properties["descripcio"].toLocaleString())
-                        : "") +
-                    '</td>\
-                        </tr>\
-                        <tr>\
-                            <td colspan="2">' +
-                    (feature.properties["area"] !== null
-                        ? autolinker.link(feature.properties["area"].toLocaleString())
-                        : "") +
-                    '</td>\
-                        </tr>\
-                        <tr>\
-                            <td colspan="2">' +
-                    (feature.properties["perimetro"] !== null
-                        ? autolinker.link(feature.properties["perimetro"].toLocaleString())
-                        : "") +
-                    "</td>\
-                        </tr>\
-                    </table>";
-                layer.bindPopup(popupContent, { maxHeight: 400 });
-            }
+        var map = L.map('map', {
+            zoomControl:true, maxZoom:20, minZoom:1
+        }).fitBounds([[4.088685964485631,-73.65499139872347],[4.127048519547588,-73.5937150842353]]);
+        var hash = new L.Hash(map);
+        map.attributionControl.setPrefix('<a href="https://github.com/tomchadwin/qgis2web" target="_blank">qgis2web</a> &middot; <a href="https://leafletjs.com" title="A JS library for interactive maps">Leaflet</a> &middot; <a href="https://qgis.org">QGIS</a>');
+        var autolinker = new Autolinker({truncate: {length: 30, location: 'smart'}});
+        var bounds_group = new L.featureGroup([]);
+        function setBounds() {
+        }
+        map.createPane('pane_Satelite_0');
+        map.getPane('pane_Satelite_0').style.zIndex = 400;
+        var layer_Satelite_0 = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
+            pane: 'pane_Satelite_0',
+            opacity: 1.0,
+            attribution: '',
+            minZoom: 1,
+            maxZoom: 20,
+            minNativeZoom: 0,
+            maxNativeZoom: 18
+        });
+        layer_Satelite_0;
+        map.addLayer(layer_Satelite_0);
+        function pop_capa_1(feature, layer) {
+            var popupContent = '<table>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['id'] !== null ? autolinker.link(feature.properties['id'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['descripcio'] !== null ? autolinker.link(feature.properties['descripcio'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['area'] !== null ? autolinker.link(feature.properties['area'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['perimetro'] !== null ? autolinker.link(feature.properties['perimetro'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                </table>';
+            layer.bindPopup(popupContent, {maxHeight: 400});
+        }
 
-            var pattern_capa_1_0 = new L.StripePattern({
-                weight: 0.3,
-                spaceWeight: 2.0,
-                color: "#38adb8",
-                opacity: 1.0,
-                spaceOpacity: 0,
-                angle: 315,
-            });
-            pattern_capa_1_0.addTo(map);
-            var pattern_capa_1_0 = new L.StripePattern({
-                weight: 0.3,
-                spaceWeight: 2.0,
-                color: "#41cbcd",
-                opacity: 1.0,
-                spaceOpacity: 0,
-                angle: 315,
-            });
-            pattern_capa_1_0.addTo(map);
-            var pattern_capa_1_0 = new L.StripePattern({
-                weight: 0.3,
-                spaceWeight: 2.0,
-                color: "#37cfca",
-                opacity: 1.0,
-                spaceOpacity: 0,
-                angle: 315,
-            });
-            pattern_capa_1_0.addTo(map);
-            var pattern_capa_1_0 = new L.StripePattern({
-                weight: 0.3,
-                spaceWeight: 2.0,
-                color: "#3ad8d5",
-                opacity: 1.0,
-                spaceOpacity: 0,
-                angle: 315,
-            });
-            pattern_capa_1_0.addTo(map);
-            var pattern_capa_1_0 = new L.StripePattern({
-                weight: 0.3,
-                spaceWeight: 2.0,
-                color: "#39d1d1",
-                opacity: 1.0,
-                spaceOpacity: 0,
-                angle: 315,
-            });
-            pattern_capa_1_0.addTo(map);
-            var pattern_capa_1_0 = new L.StripePattern({
-                weight: 0.3,
-                spaceWeight: 2.0,
-                color: "#38c5c0",
-                opacity: 1.0,
-                spaceOpacity: 0,
-                angle: 315,
-            });
-            pattern_capa_1_0.addTo(map);
-            var pattern_capa_1_0 = new L.StripePattern({
-                weight: 0.3,
-                spaceWeight: 2.0,
-                color: "#38adb8",
-                opacity: 1.0,
-                spaceOpacity: 0,
-                angle: 315,
-            });
-            pattern_capa_1_0.addTo(map);
-            var pattern_capa_1_0 = new L.StripePattern({
-                weight: 0.3,
-                spaceWeight: 2.0,
-                color: "#41cbcd",
-                opacity: 1.0,
-                spaceOpacity: 0,
-                angle: 315,
-            });
-            pattern_capa_1_0.addTo(map);
-            var pattern_capa_1_0 = new L.StripePattern({
-                weight: 0.3,
-                spaceWeight: 2.0,
-                color: "#37cfca",
-                opacity: 1.0,
-                spaceOpacity: 0,
-                angle: 315,
-            });
-            pattern_capa_1_0.addTo(map);
-            var pattern_capa_1_0 = new L.StripePattern({
-                weight: 0.3,
-                spaceWeight: 2.0,
-                color: "#3ad8d5",
-                opacity: 1.0,
-                spaceOpacity: 0,
-                angle: 315,
-            });
-            pattern_capa_1_0.addTo(map);
-            var pattern_capa_1_0 = new L.StripePattern({
-                weight: 0.3,
-                spaceWeight: 2.0,
-                color: "#39d1d1",
-                opacity: 1.0,
-                spaceOpacity: 0,
-                angle: 315,
-            });
-            pattern_capa_1_0.addTo(map);
-            var pattern_capa_1_0 = new L.StripePattern({
-                weight: 0.3,
-                spaceWeight: 2.0,
-                color: "#38c5c0",
-                opacity: 1.0,
-                spaceOpacity: 0,
-                angle: 315,
-            });
-            pattern_capa_1_0.addTo(map);
-            function style_capa_1_0(feature) {
-                switch (String(feature.properties["id"])) {
-                    case "41":
-                        return {
-                            pane: "pane_capa_1",
-                            stroke: false,
-                            fillOpacity: 1,
-                            fillPattern: pattern_capa_1_0,
-                            interactive: true,
-                        };
-                        break;
-                    case "51":
-                        return {
-                            pane: "pane_capa_1",
-                            stroke: false,
-                            fillOpacity: 1,
-                            fillPattern: pattern_capa_1_0,
-                            interactive: true,
-                        };
-                        break;
-                    case "81":
-                        return {
-                            pane: "pane_capa_1",
-                            stroke: false,
-                            fillOpacity: 1,
-                            fillPattern: pattern_capa_1_0,
-                            interactive: true,
-                        };
-                        break;
-                    case "91":
-                        return {
-                            pane: "pane_capa_1",
-                            stroke: false,
-                            fillOpacity: 1,
-                            fillPattern: pattern_capa_1_0,
-                            interactive: true,
-                        };
-                        break;
-                    case "100":
-                        return {
-                            pane: "pane_capa_1",
-                            stroke: false,
-                            fillOpacity: 1,
-                            fillPattern: pattern_capa_1_0,
-                            interactive: true,
-                        };
-                        break;
-                    case "111":
-                        return {
-                            pane: "pane_capa_1",
-                            stroke: false,
-                            fillOpacity: 1,
-                            fillPattern: pattern_capa_1_0,
-                            interactive: true,
-                        };
-                        break;
-                }
-            }
-            function style_capa_1_1(feature) {
-                switch (String(feature.properties["id"])) {
-                    case "41":
-                        return {
-                            pane: "pane_capa_1",
-                            opacity: 1,
-                            color: "rgba(56,173,184,1.0)",
-                            dashArray: "",
-                            lineCap: "square",
-                            lineJoin: "bevel",
-                            weight: 2.0,
-                            fillOpacity: 0,
-                            interactive: true,
-                        };
-                        break;
-                    case "51":
-                        return {
-                            pane: "pane_capa_1",
-                            opacity: 1,
-                            color: "rgba(65,203,205,1.0)",
-                            dashArray: "",
-                            lineCap: "square",
-                            lineJoin: "bevel",
-                            weight: 2.0,
-                            fillOpacity: 0,
-                            interactive: true,
-                        };
-                        break;
-                    case "81":
-                        return {
-                            pane: "pane_capa_1",
-                            opacity: 1,
-                            color: "rgba(55,207,202,0.8196078431372549)",
-                            dashArray: "",
-                            lineCap: "square",
-                            lineJoin: "bevel",
-                            weight: 2.0,
-                            fillOpacity: 0,
-                            interactive: true,
-                        };
-                        break;
-                    case "91":
-                        return {
-                            pane: "pane_capa_1",
-                            opacity: 1,
-                            color: "rgba(58,216,213,0.788235294117647)",
-                            dashArray: "",
-                            lineCap: "square",
-                            lineJoin: "bevel",
-                            weight: 2.0,
-                            fillOpacity: 0,
-                            interactive: true,
-                        };
-                        break;
-                    case "100":
-                        return {
-                            pane: "pane_capa_1",
-                            opacity: 1,
-                            color: "rgba(57,209,209,0.807843137254902)",
-                            dashArray: "",
-                            lineCap: "square",
-                            lineJoin: "bevel",
-                            weight: 2.0,
-                            fillOpacity: 0,
-                            interactive: true,
-                        };
-                        break;
-                    case "111":
-                        return {
-                            pane: "pane_capa_1",
-                            opacity: 1,
-                            color: "rgba(56,197,192,0.807843137254902)",
-                            dashArray: "",
-                            lineCap: "square",
-                            lineJoin: "bevel",
-                            weight: 2.0,
-                            fillOpacity: 0,
-                            interactive: true,
-                        };
-                        break;
-                }
-            }
-            map.createPane("pane_capa_1");
-            map.getPane("pane_capa_1").style.zIndex = 401;
-            map.getPane("pane_capa_1").style["mix-blend-mode"] = "normal";
-            var layer_capa_1 = new L.geoJson.multiStyle(json_capa_1, {
-                attribution: "",
+        var pattern_capa_1_0 = new L.StripePattern({
+            weight: 0.3,
+            spaceWeight: 2.0,
+            color: '#38adb8',
+            opacity: 1.0,
+            spaceOpacity: 0,
+            angle: 315
+        });
+        pattern_capa_1_0.addTo(map);
+        var pattern_capa_1_0 = new L.StripePattern({
+            weight: 0.3,
+            spaceWeight: 2.0,
+            color: '#41cbcd',
+            opacity: 1.0,
+            spaceOpacity: 0,
+            angle: 315
+        });
+        pattern_capa_1_0.addTo(map);
+        var pattern_capa_1_0 = new L.StripePattern({
+            weight: 0.3,
+            spaceWeight: 2.0,
+            color: '#37cfca',
+            opacity: 1.0,
+            spaceOpacity: 0,
+            angle: 315
+        });
+        pattern_capa_1_0.addTo(map);
+        var pattern_capa_1_0 = new L.StripePattern({
+            weight: 0.3,
+            spaceWeight: 2.0,
+            color: '#3ad8d5',
+            opacity: 1.0,
+            spaceOpacity: 0,
+            angle: 315
+        });
+        pattern_capa_1_0.addTo(map);
+        var pattern_capa_1_0 = new L.StripePattern({
+            weight: 0.3,
+            spaceWeight: 2.0,
+            color: '#39d1d1',
+            opacity: 1.0,
+            spaceOpacity: 0,
+            angle: 315
+        });
+        pattern_capa_1_0.addTo(map);
+        var pattern_capa_1_0 = new L.StripePattern({
+            weight: 0.3,
+            spaceWeight: 2.0,
+            color: '#38c5c0',
+            opacity: 1.0,
+            spaceOpacity: 0,
+            angle: 315
+        });
+        pattern_capa_1_0.addTo(map);
+        var pattern_capa_1_0 = new L.StripePattern({
+            weight: 0.3,
+            spaceWeight: 2.0,
+            color: '#28bea3',
+            opacity: 1.0,
+            spaceOpacity: 0,
+            angle: 315
+        });
+        pattern_capa_1_0.addTo(map);
+        var pattern_capa_1_0 = new L.StripePattern({
+            weight: 0.3,
+            spaceWeight: 2.0,
+            color: '#2ac4b7',
+            opacity: 1.0,
+            spaceOpacity: 0,
+            angle: 315
+        });
+        pattern_capa_1_0.addTo(map);
+        var pattern_capa_1_0 = new L.StripePattern({
+            weight: 0.3,
+            spaceWeight: 2.0,
+            color: '#38adb8',
+            opacity: 1.0,
+            spaceOpacity: 0,
+            angle: 315
+        });
+        pattern_capa_1_0.addTo(map);
+        var pattern_capa_1_0 = new L.StripePattern({
+            weight: 0.3,
+            spaceWeight: 2.0,
+            color: '#41cbcd',
+            opacity: 1.0,
+            spaceOpacity: 0,
+            angle: 315
+        });
+        pattern_capa_1_0.addTo(map);
+        var pattern_capa_1_0 = new L.StripePattern({
+            weight: 0.3,
+            spaceWeight: 2.0,
+            color: '#37cfca',
+            opacity: 1.0,
+            spaceOpacity: 0,
+            angle: 315
+        });
+        pattern_capa_1_0.addTo(map);
+        var pattern_capa_1_0 = new L.StripePattern({
+            weight: 0.3,
+            spaceWeight: 2.0,
+            color: '#3ad8d5',
+            opacity: 1.0,
+            spaceOpacity: 0,
+            angle: 315
+        });
+        pattern_capa_1_0.addTo(map);
+        var pattern_capa_1_0 = new L.StripePattern({
+            weight: 0.3,
+            spaceWeight: 2.0,
+            color: '#39d1d1',
+            opacity: 1.0,
+            spaceOpacity: 0,
+            angle: 315
+        });
+        pattern_capa_1_0.addTo(map);
+        var pattern_capa_1_0 = new L.StripePattern({
+            weight: 0.3,
+            spaceWeight: 2.0,
+            color: '#38c5c0',
+            opacity: 1.0,
+            spaceOpacity: 0,
+            angle: 315
+        });
+        pattern_capa_1_0.addTo(map);
+        var pattern_capa_1_0 = new L.StripePattern({
+            weight: 0.3,
+            spaceWeight: 2.0,
+            color: '#28bea3',
+            opacity: 1.0,
+            spaceOpacity: 0,
+            angle: 315
+        });
+        pattern_capa_1_0.addTo(map);
+        var pattern_capa_1_0 = new L.StripePattern({
+            weight: 0.3,
+            spaceWeight: 2.0,
+            color: '#2ac4b7',
+            opacity: 1.0,
+            spaceOpacity: 0,
+            angle: 315
+        });
+        pattern_capa_1_0.addTo(map);
+        function style_capa_1_0(feature) {
+            switch(String(feature.properties['id'])) {
+                case '41':
+                    return {
+                pane: 'pane_capa_1',
+                stroke: false,
+                fillOpacity: 1,
+                fillPattern: pattern_capa_1_0,
                 interactive: true,
-                dataVar: "json_capa_1",
-                layerName: "layer_capa_1",
-                pane: "pane_capa_1",
-                onEachFeature: pop_capa_1,
-                styles: [style_capa_1_0, style_capa_1_1],
-            });
-            bounds_group.addLayer(layer_capa_1);
-            map.addLayer(layer_capa_1);
-            var baseMaps = {};
-            L.control
-                .layers(baseMaps, {
-                    'capa<br /><table><tr><td style="text-align: center;"><img src="legend/capa_1_410.png" /></td><td>41</td></tr><tr><td style="text-align: center;"><img src="legend/capa_1_511.png" /></td><td>51</td></tr><tr><td style="text-align: center;"><img src="legend/capa_1_812.png" /></td><td>81</td></tr><tr><td style="text-align: center;"><img src="legend/capa_1_913.png" /></td><td>91</td></tr><tr><td style="text-align: center;"><img src="legend/capa_1_1004.png" /></td><td>100</td></tr><tr><td style="text-align: center;"><img src="legend/capa_1_1115.png" /></td><td>111</td></tr></table>':
-                        layer_capa_1,
-                    Satelite: layer_Satelite_0,
-                })
-                .addTo(map);
-            setBounds();
-            var i = 0;
-            layer_capa_1.eachLayer(function (layer) {
-                var context = {
-                    feature: layer.feature,
-                    variables: {},
-                };
-                layer.bindTooltip(
-                    layer.feature.properties["id"] !== null
-                        ? String(
-                            "<div style=\"color: #323232; font-size: 10pt; font-family: 'MS Shell Dlg 2', sans-serif;\">" +
-                            layer.feature.properties["id"]
-                        ) + "</div>"
-                        : "",
-                    { permanent: true, offset: [-0, -16], className: "css_capa_1" }
-                );
-                labels.push(layer);
-                totalMarkers += 1;
-                layer.added = true;
-                addLabel(layer, i);
-                i++;
-            });
+            }
+                    break;
+                case '51':
+                    return {
+                pane: 'pane_capa_1',
+                stroke: false,
+                fillOpacity: 1,
+                fillPattern: pattern_capa_1_0,
+                interactive: true,
+            }
+                    break;
+                case '81':
+                    return {
+                pane: 'pane_capa_1',
+                stroke: false,
+                fillOpacity: 1,
+                fillPattern: pattern_capa_1_0,
+                interactive: true,
+            }
+                    break;
+                case '91':
+                    return {
+                pane: 'pane_capa_1',
+                stroke: false,
+                fillOpacity: 1,
+                fillPattern: pattern_capa_1_0,
+                interactive: true,
+            }
+                    break;
+                case '100':
+                    return {
+                pane: 'pane_capa_1',
+                stroke: false,
+                fillOpacity: 1,
+                fillPattern: pattern_capa_1_0,
+                interactive: true,
+            }
+                    break;
+                case '111':
+                    return {
+                pane: 'pane_capa_1',
+                stroke: false,
+                fillOpacity: 1,
+                fillPattern: pattern_capa_1_0,
+                interactive: true,
+            }
+                    break;
+                case '21':
+                    return {
+                pane: 'pane_capa_1',
+                stroke: false,
+                fillOpacity: 1,
+                fillPattern: pattern_capa_1_0,
+                interactive: true,
+            }
+                    break;
+                case '31':
+                    return {
+                pane: 'pane_capa_1',
+                stroke: false,
+                fillOpacity: 1,
+                fillPattern: pattern_capa_1_0,
+                interactive: true,
+            }
+                    break;
+            }
+        }
+        function style_capa_1_1(feature) {
+            switch(String(feature.properties['id'])) {
+                case '41':
+                    return {
+                pane: 'pane_capa_1',
+                opacity: 1,
+                color: 'rgba(56,173,184,1.0)',
+                dashArray: '',
+                lineCap: 'square',
+                lineJoin: 'bevel',
+                weight: 2.0,
+                fillOpacity: 0,
+                interactive: true,
+            }
+                    break;
+                case '51':
+                    return {
+                pane: 'pane_capa_1',
+                opacity: 1,
+                color: 'rgba(65,203,205,1.0)',
+                dashArray: '',
+                lineCap: 'square',
+                lineJoin: 'bevel',
+                weight: 2.0,
+                fillOpacity: 0,
+                interactive: true,
+            }
+                    break;
+                case '81':
+                    return {
+                pane: 'pane_capa_1',
+                opacity: 1,
+                color: 'rgba(55,207,202,0.8196078431372549)',
+                dashArray: '',
+                lineCap: 'square',
+                lineJoin: 'bevel',
+                weight: 2.0,
+                fillOpacity: 0,
+                interactive: true,
+            }
+                    break;
+                case '91':
+                    return {
+                pane: 'pane_capa_1',
+                opacity: 1,
+                color: 'rgba(58,216,213,0.788235294117647)',
+                dashArray: '',
+                lineCap: 'square',
+                lineJoin: 'bevel',
+                weight: 2.0,
+                fillOpacity: 0,
+                interactive: true,
+            }
+                    break;
+                case '100':
+                    return {
+                pane: 'pane_capa_1',
+                opacity: 1,
+                color: 'rgba(57,209,209,0.807843137254902)',
+                dashArray: '',
+                lineCap: 'square',
+                lineJoin: 'bevel',
+                weight: 2.0,
+                fillOpacity: 0,
+                interactive: true,
+            }
+                    break;
+                case '111':
+                    return {
+                pane: 'pane_capa_1',
+                opacity: 1,
+                color: 'rgba(56,197,192,0.807843137254902)',
+                dashArray: '',
+                lineCap: 'square',
+                lineJoin: 'bevel',
+                weight: 2.0,
+                fillOpacity: 0,
+                interactive: true,
+            }
+                    break;
+                case '21':
+                    return {
+                pane: 'pane_capa_1',
+                opacity: 1,
+                color: 'rgba(40,190,163,1.0)',
+                dashArray: '',
+                lineCap: 'square',
+                lineJoin: 'bevel',
+                weight: 2.0,
+                fillOpacity: 0,
+                interactive: true,
+            }
+                    break;
+                case '31':
+                    return {
+                pane: 'pane_capa_1',
+                opacity: 1,
+                color: 'rgba(42,196,183,1.0)',
+                dashArray: '',
+                lineCap: 'square',
+                lineJoin: 'bevel',
+                weight: 2.0,
+                fillOpacity: 0,
+                interactive: true,
+            }
+                    break;
+            }
+        }
+        map.createPane('pane_capa_1');
+        map.getPane('pane_capa_1').style.zIndex = 401;
+        map.getPane('pane_capa_1').style['mix-blend-mode'] = 'normal';
+        var layer_capa_1 = new L.geoJson.multiStyle(json_capa_1, {
+            attribution: '',
+            interactive: true,
+            dataVar: 'json_capa_1',
+            layerName: 'layer_capa_1',
+            pane: 'pane_capa_1',
+            onEachFeature: pop_capa_1,
+            styles: [style_capa_1_0,style_capa_1_1,]
+        });
+        bounds_group.addLayer(layer_capa_1);
+        map.addLayer(layer_capa_1);
+        var baseMaps = {};
+        L.control.layers(baseMaps,{'capa<br /><table><tr><td style="text-align: center;"><img src="legend/capa_1_410.png" /></td><td>41</td></tr><tr><td style="text-align: center;"><img src="legend/capa_1_511.png" /></td><td>51</td></tr><tr><td style="text-align: center;"><img src="legend/capa_1_812.png" /></td><td>81</td></tr><tr><td style="text-align: center;"><img src="legend/capa_1_913.png" /></td><td>91</td></tr><tr><td style="text-align: center;"><img src="legend/capa_1_1004.png" /></td><td>100</td></tr><tr><td style="text-align: center;"><img src="legend/capa_1_1115.png" /></td><td>111</td></tr><tr><td style="text-align: center;"><img src="legend/capa_1_216.png" /></td><td>21</td></tr><tr><td style="text-align: center;"><img src="legend/capa_1_317.png" /></td><td>31</td></tr></table>': layer_capa_1,"Satelite": layer_Satelite_0,}).addTo(map);
+        setBounds();
+        var i = 0;
+        layer_capa_1.eachLayer(function(layer) {
+            var context = {
+                feature: layer.feature,
+                variables: {}
+            };
+            layer.bindTooltip((layer.feature.properties['id'] !== null?String('<div style="color: #323232; font-size: 10pt; font-family: \'MS Shell Dlg 2\', sans-serif;">' + layer.feature.properties['id']) + '</div>':''), {permanent: true, offset: [-0, -16], className: 'css_capa_1'});
+            labels.push(layer);
+            totalMarkers += 1;
+              layer.added = true;
+              addLabel(layer, i);
+              i++;
+        });
+        resetLabels([layer_capa_1]);
+        map.on("zoomend", function(){
             resetLabels([layer_capa_1]);
-            map.on("zoomend", function () {
-                resetLabels([layer_capa_1]);
-            });
-            map.on("layeradd", function () {
-                resetLabels([layer_capa_1]);
-            });
-            map.on("layerremove", function () {
-                resetLabels([layer_capa_1]);
-            });
+        });
+        map.on("layeradd", function(){
+            resetLabels([layer_capa_1]);
+        });
+        map.on("layerremove", function(){
+            resetLabels([layer_capa_1]);
+        });
         </script>
         <div class="content1 sau">
             <h2 class="title letrap">Rectoría Orinoquía</h2>
